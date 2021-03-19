@@ -9,17 +9,18 @@
 #' @export
 #'
 #' @examples
+#' use_datafleets_conda()
 #' res = fleet_connect()
 fleet_connect = function(api_token =  Sys.getenv("DATAFLEETS_API_KEY"),
                          coordinator_address = Sys.getenv("DATAFLEETS_COORDINATOR")) {
   pf = reticulate::import("pyfleets", convert = FALSE)
-  pf_nb = reticulate::import("pyfleets.notebook", convert = FALSE)
+  # pf_n,b = reticulate::import("pyfleets.notebook", convert = FALSE)
 
   FleetSession = pf$FleetSession
 
   config = list(
     'api-token' =  api_token,
-    'coordinator.address' = coordinator_address,
+    'coordinator.address' = coordinator_address
   )
 
   fleet = FleetSession$builder$config(config)$get_or_create()
@@ -57,6 +58,7 @@ csv_query = function(fleet,
                      schema=NULL,
                      use_cached_result=TRUE) {
 
+  pf = reticulate::import("pyfleets", convert = FALSE)
 
   params = pf$QueryParameters(sql=query,
                               epsilon=epsilon,

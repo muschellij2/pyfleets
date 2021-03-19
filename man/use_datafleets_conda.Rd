@@ -2,13 +2,23 @@
 % Please edit documentation in R/conda.R
 \name{use_datafleets_conda}
 \alias{use_datafleets_conda}
+\alias{create_fleet_conda}
 \title{Use datafleets conda environment}
 \usage{
 use_datafleets_conda()
+
+create_fleet_conda(yaml = "datafleets.yml")
+}
+\arguments{
+\item{yaml}{yaml file for the datafleets configuration}
 }
 \value{
 No return value
 }
 \description{
 Use datafleets conda environment
+}
+\note{
+Download the file from
+\url{https://docs.datafleets.io/docs/-MS9MPljCpDYQUqw9T7X/getting-started/preparing-your-python-environment}
 }

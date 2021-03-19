@@ -23,5 +23,6 @@ A fleet session object
 Connect to Pyfleets
 }
 \examples{
+use_datafleets_conda()
 res = fleet_connect()
 }
