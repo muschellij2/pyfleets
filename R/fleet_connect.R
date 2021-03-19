@@ -48,7 +48,7 @@ fleet_sql = function(fleet, query, ...) {
 
 
 #' @export
-#' @rdname csv_query
+#' @rdname fleet_sql
 csv_query = function(fleet,
                      query,
                      meta = NULL,
@@ -74,7 +74,7 @@ csv_query = function(fleet,
   while (status != "completed") {
     out = fleet$comp$poll_request_state(request_id)
     status = as.character(out$status)
-    print(status)
+    message(status)
     Sys.sleep(2)
   }
 
@@ -84,7 +84,7 @@ csv_query = function(fleet,
 }
 
 #' @export
-#' @rdname csv_query
+#' @rdname fleet_sql
 csv_query_file = function(fleet, query, ...) {
   csv = csv_query(fleet, query, ...)
   tfile = tempfile(fileext = ".csv")
