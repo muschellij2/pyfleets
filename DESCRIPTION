@@ -1,0 +1,32 @@
+Package: pyfleets
+Title: Interact with the Pyfleets Environment
+Version: 0.1.1
+Authors@R: c(
+    person(given = "John",
+           family = "Muschelli",
+           email = "muschellij2@gmail.com",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-6469-1750"))
+    )
+Description: Interacts with the 'pyfleets' Python environment.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+SystemRequirements: Python
+Imports: 
+    reticulate,
+    R.utils,
+    tools,
+    lubridate,
+    dplyr,
+    tibble,
+    utils,
+    readr
+Suggests: 
+    testthat
+Depends: 
+    R (>= 2.10)
+URL: https://github.com/muschellij2/pyfleets
+BugReports: https://github.com/muschellij2/pyfleets/issues

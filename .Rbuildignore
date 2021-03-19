@@ -1,0 +1,10 @@
+^pycwa\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^appveyor\.yml$
+^README\.Rmd$
+^\.travis\.yml$
+^data-raw$
+^requirements\.txt$
+^\.github$
+^inst/acc/java/*\.class$
